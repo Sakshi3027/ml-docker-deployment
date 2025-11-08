@@ -269,3 +269,11 @@ This project is licensed under the MIT License.
 - Scikit-learn community
 - Docker documentation
 
+##  What I Learned
+
+Through this project, I gained hands-on experience with:
+- Training and deploying ML models in production
+- Building RESTful APIs with FastAPI
+- Containerization with Docker
+- API documentation and testing
+- Git version control and GitHub workflows
