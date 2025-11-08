@@ -1,5 +1,11 @@
 # ML Model Deployment with Docker 
 
+![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)
+![Docker](https://img.shields.io/badge/Docker-ready-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+
 A complete machine learning model deployment project using FastAPI and Docker. This project demonstrates how to train a sentiment analysis model, create a REST API, and containerize it for easy deployment.
 
 ##  Features
@@ -10,6 +16,18 @@ A complete machine learning model deployment project using FastAPI and Docker. T
 - **Batch Processing**: Support for single and batch predictions
 - **Health Checks**: Built-in health monitoring
 - **API Documentation**: Auto-generated Swagger UI
+
+##  Screenshots
+
+### API Documentation (Swagger UI)
+![API Documentation](images/api-documentation.png)
+
+### Making Predictions
+![Prediction Example](images/api-prediction-example.png)
+
+### Interactive Testing
+You can test all endpoints directly from the browser at `http://localhost:8000/docs`
+
 
 ##  Project Structure
 
