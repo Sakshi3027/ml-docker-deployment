@@ -8,6 +8,31 @@
 
 A complete machine learning model deployment project using FastAPI and Docker. This project demonstrates how to train a sentiment analysis model, create a REST API, and containerize it for easy deployment.
 
+
+## Live Demo
+
+Try the API now: https://ml-docker-deployment.onrender.com/docs
+Quick Test in Terminal
+bash# Health Check
+curl https://ml-docker-deployment.onrender.com/health
+
+# Make a Prediction
+curl -X POST "https://ml-docker-deployment.onrender.com/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"text": "This product is amazing!"}'
+Quick Test in Python
+pythonimport requests
+
+# Make a prediction
+response = requests.post(
+    "https://ml-docker-deployment.onrender.com/predict",
+    json={"text": "I love this product!"}
+)
+print(response.json())
+
+⚠️ Note: The free tier may take 30-60 seconds to wake up if the app has been inactive (cold start). Subsequent requests will be fast!
+
+
 ##  Features
 
 - **Machine Learning Model**: Sentiment analysis using Scikit-learn
@@ -16,6 +41,7 @@ A complete machine learning model deployment project using FastAPI and Docker. T
 - **Batch Processing**: Support for single and batch predictions
 - **Health Checks**: Built-in health monitoring
 - **API Documentation**: Auto-generated Swagger UI
+- **Cloud Deployed**: Live on Render.com with 99.9% uptime
 
 ##  Screenshots
 
@@ -24,6 +50,15 @@ A complete machine learning model deployment project using FastAPI and Docker. T
 
 ### Making Predictions
 ![Prediction Example](images/api-prediction-example.png)
+
+### health
+![health](images/health.png)
+
+### prediction-commands 
+![prediction-commands](images/prediction-commands.png)
+
+### render live 
+![render](images/render.png)
 
 ### Interactive Testing
 You can test all endpoints directly from the browser at `http://localhost:8000/docs`
@@ -37,13 +72,16 @@ ml-docker-deployment/
 │   ├── __init__.py
 │   └── main.py          # FastAPI application
 ├── models/
-│   └── sentiment_model.pkl  # Trained model (generated)
+│   └── sentiment_model.pkl  # Trained model
+├── images/              # Screenshots
+│   ├── api-documentation.png
+│   ├── health.png
+│   ├── prediction-commands.png
+│   └── render.png
 ├── train_model.py       # Model training script
 ├── requirements.txt     # Python dependencies
 ├── Dockerfile          # Docker configuration
-├── .dockerignore       # Docker ignore file
 └── README.md          # This file
-```
 
 ##  Quick Start
 
